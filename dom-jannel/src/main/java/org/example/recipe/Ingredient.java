@@ -21,6 +21,7 @@ public class Ingredient {
                 this.unitOfMeasurement = unitOfMeasurement;
         }
 
-        public Ingredient() {}
+    public Ingredient() {
+    }
 }
 

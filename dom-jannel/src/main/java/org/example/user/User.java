@@ -18,4 +18,11 @@ public class User {
     String password;
     boolean hasAdminPrivileges;
     Date dateRegistered;
+
+    public User(String name, String email, String password, boolean hasAdminPrivileges) {
+        this.name = name;
+        this.email = email;
+        this.password = password;
+        this.hasAdminPrivileges = hasAdminPrivileges;
+    }
 }

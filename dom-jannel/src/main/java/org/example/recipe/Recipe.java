@@ -33,4 +33,15 @@ public class Recipe {
     Date dateCreated;
     Date lastModified;
 
+    public Recipe(String title, String instructions, String preparationTime, String cookingTime, int servings, DifficultyLevel difficultyLevel, List<Ingredient> listOfIngredients, List<Category> listOfCategories, User creator) {
+        this.title = title;
+        this.instructions = instructions;
+        this.preparationTime = preparationTime;
+        this.cookingTime = cookingTime;
+        this.servings = servings;
+        this.difficultyLevel = difficultyLevel;
+        this.listOfIngredients = listOfIngredients;
+        this.listOfCategories = listOfCategories;
+        this.creator = creator;
+    }
 }
