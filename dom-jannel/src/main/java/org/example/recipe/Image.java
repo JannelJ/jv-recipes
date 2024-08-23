@@ -1,6 +1,5 @@
 package org.example.recipe;
 
-
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
@@ -11,7 +10,7 @@ public class Image {
 
     @Id
     @GeneratedValue
-    long id;
+    Long id;
 
     String fileName;
     String fileData;
@@ -30,5 +29,29 @@ public class Image {
 
     public long getId() {
         return id;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
+    }
+
+    public String getFileData() {
+        return fileData;
+    }
+
+    public void setFileData(String fileData) {
+        this.fileData = fileData;
+    }
+
+    public Recipe getAssociatedRecipe() {
+        return associatedRecipe;
+    }
+
+    public void setAssociatedRecipe(Recipe associatedRecipe) {
+        this.associatedRecipe = associatedRecipe;
     }
 }
