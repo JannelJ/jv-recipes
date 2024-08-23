@@ -42,18 +42,29 @@ public class Database {
         return sessionFactory;
     }
 
-    static void seedRecipes(){
+    static void seedRecipes() {
+
         Ingredient tofu = new Ingredient("tofu", 75, UnitOfMeasurement.GRAMS);
         Category asian = new Category("asian");
-        User jannel = new User("jannel", "jannel@gmail.com", "jannel123", true);
+        User jannel = new User("jannel", "jannel@gmail.com",
+                "jannel123", true);
+
+        Ingredient mushroom = new Ingredient("mushroom", 100, UnitOfMeasurement.GRAMS);
+        Recipe soup = new Recipe("Soup", "How to make Soup", "10 mins",
+                "15 mins", 1, DifficultyLevel.EASY, new ArrayList<>(List.of(tofu)),
+                new ArrayList<>(List.of(asian)), jannel);
 
         var sessionFactory = getSessionFactory();
         sessionFactory.inTransaction(session -> {
-            session.persist(new Ingredient("mushroom", 100, UnitOfMeasurement.GRAMS));
-            session.persist(new Recipe("Soup", "How to make Soup", "10 mins",
-                    "15 mins", 1, DifficultyLevel.EASY, new ArrayList<>(List.of(tofu)),
-                    new ArrayList<>(List.of(asian)), jannel));
+            session.persist(mushroom);
+            session.persist(soup);
+            session.flush();
+            session.refresh(soup);
+            var ingredientWithId = mushroom.getId();
+            System.out.println(mushroom.getId());
         });
+
+
 
     }
 }

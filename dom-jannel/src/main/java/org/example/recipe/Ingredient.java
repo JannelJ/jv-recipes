@@ -23,5 +23,9 @@ public class Ingredient {
 
     public Ingredient() {
     }
+
+        public long getId() {
+                return id;
+        }
 }
 

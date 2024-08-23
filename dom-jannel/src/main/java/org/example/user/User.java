@@ -25,4 +25,12 @@ public class User {
         this.password = password;
         this.hasAdminPrivileges = hasAdminPrivileges;
     }
+
+    public User(){
+
+    }
+
+    public long getId() {
+        return id;
+    }
 }

@@ -44,4 +44,12 @@ public class Recipe {
         this.listOfCategories = listOfCategories;
         this.creator = creator;
     }
+
+    public Recipe(){
+
+    }
+
+    public long getId() {
+        return id;
+    }
 }

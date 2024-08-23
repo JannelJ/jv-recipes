@@ -23,4 +23,11 @@ public class Comment {
     @ManyToOne
     Recipe associatedRecipe;
 
+    public Comment(){
+
+    }
+
+    public long getId() {
+        return id;
+    }
 }

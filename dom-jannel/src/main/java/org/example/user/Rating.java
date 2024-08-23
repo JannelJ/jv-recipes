@@ -21,5 +21,11 @@ public class Rating {
     @ManyToOne
     User rater;
 
+public Rating() {
 
+}
+
+    public long getId() {
+        return id;
+    }
 }

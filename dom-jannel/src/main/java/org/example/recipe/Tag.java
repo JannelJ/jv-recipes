@@ -13,4 +13,13 @@ public class Tag {
 
     String name;
 
+    public Tag(){
+
+    }
+
+    public long getId() {
+        return id;
+    }
 }
+
+
