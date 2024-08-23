@@ -17,6 +17,14 @@ public class Image {
     String fileData;
 
     @ManyToOne
-    String associatedRecipe;
+    Recipe associatedRecipe;
 
+    public Image(String fileName, String fileData, Recipe associatedRecipe) {
+        this.fileName = fileName;
+        this.fileData = fileData;
+        this.associatedRecipe = associatedRecipe;
+    }
+
+    public Image() {
+    }
 }

@@ -1,10 +1,7 @@
 package org.example.recipe;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToOne;
+import jakarta.persistence.*;
 import org.example.user.User;
 
 import java.sql.Date;
@@ -22,7 +19,10 @@ public class Recipe {
     String preparationTime;
     String cookingTime;
     int servings;
+
+    @Enumerated(EnumType.STRING)
     DifficultyLevel difficultyLevel;
+
     int rating;
     List<Ingredient> listOfIngredients;
     List<Category> listOfCategories;

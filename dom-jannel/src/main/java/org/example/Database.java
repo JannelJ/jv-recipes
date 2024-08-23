@@ -1,5 +1,9 @@
 package org.example;
 
+import org.example.recipe.*;
+import org.example.user.Comment;
+import org.example.user.Rating;
+import org.example.user.User;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -20,8 +24,23 @@ public class Database {
                 .setProperty(FORMAT_SQL, TRUE.toString())
                 .setProperty(HIGHLIGHT_SQL, TRUE.toString())
                 .setProperty("hibernate.agroal.maxSize", "20")
+                .addAnnotatedClass(Category.class)
+                .addAnnotatedClass(Image.class)
+                .addAnnotatedClass(Ingredient.class)
+                .addAnnotatedClass(Recipe.class)
+                .addAnnotatedClass(Tag.class)
+                .addAnnotatedClass(Comment.class)
+                .addAnnotatedClass(Rating.class)
+                .addAnnotatedClass(User.class)
                 .buildSessionFactory();
 
         return sessionFactory;
+    }
+
+    static void seedRecipes(){
+        var sessionFactory = getSessionFactory();
+        sessionFactory.inTransaction(session -> {
+            session.persist(new Ingredient("rice"));
+        });
     }
 }
