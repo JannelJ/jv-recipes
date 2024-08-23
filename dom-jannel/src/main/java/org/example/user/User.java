@@ -1,17 +1,21 @@
-package org.example;
+package org.example.user;
+
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import jdk.jfr.Name;
 
+import java.sql.Date;
 
 @Entity
-public class Tag {
+public class User {
     @Id
     @GeneratedValue
     long id;
 
     String name;
-
+    String email;
+    String password;
+    boolean isAdmin;
+    Date date;
 }

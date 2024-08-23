@@ -1,4 +1,4 @@
-package org.example;
+package org.example.recipeobjects;
 
 
 import jakarta.persistence.Entity;

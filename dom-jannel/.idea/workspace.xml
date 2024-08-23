@@ -5,7 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a00f61aa-828b-4dd1-8b6a-a0d50c9e1af5" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/Image.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/recipeobjects/Recipe.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/user/Comment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/user/Rating.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/user/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Category.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/recipeobjects/Category.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Image.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/recipeobjects/Image.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Ingredient.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/recipeobjects/Ingredient.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Tag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/recipeobjects/Tag.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
