@@ -3,7 +3,8 @@ package org.example.user;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
-import org.example.recipeobjects.Recipe;
+import jakarta.persistence.ManyToOne;
+import org.example.recipe.Recipe;
 
 import java.sql.Date;
 
@@ -15,7 +16,11 @@ public class Comment {
 
     String text;
     Date datePosted;
+
+    @ManyToOne
     User author;
+
+    @ManyToOne
     Recipe associatedRecipe;
 
 }

@@ -1,9 +1,10 @@
-package org.example.recipeobjects;
+package org.example.recipe;
 
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 
 @Entity
 public class Image {
@@ -14,6 +15,8 @@ public class Image {
 
     String fileName;
     String fileData;
+
+    @ManyToOne
     String associatedRecipe;
 
 }

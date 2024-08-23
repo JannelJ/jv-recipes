@@ -1,11 +1,8 @@
 package org.example.user;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.Id;
-import org.example.recipeobjects.Recipe;
-import org.hibernate.mapping.Value;
+import jakarta.persistence.*;
+import org.example.recipe.Recipe;
 
 import java.sql.Date;
 
@@ -17,7 +14,11 @@ public class Rating {
 
     int value;
     Date date;
+
+    @OneToOne
     Recipe associatedRecipe;
+
+    @ManyToOne
     User rater;
 
 

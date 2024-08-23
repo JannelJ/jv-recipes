@@ -16,6 +16,6 @@ public class User {
     String name;
     String email;
     String password;
-    boolean isAdmin;
-    Date date;
+    boolean hasAdminPrivileges;
+    Date dateRegistered;
 }

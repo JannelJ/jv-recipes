@@ -1,9 +1,10 @@
-package org.example.recipeobjects;
+package org.example.recipe;
 
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.ManyToOne;
 import org.example.user.User;
 
 import java.sql.Date;
@@ -21,13 +22,15 @@ public class Recipe {
     String preparationTime;
     String cookingTime;
     int servings;
-    int difficultyLevel;
+    DifficultyLevel difficultyLevel;
     int rating;
     List<Ingredient> listOfIngredients;
     List<Category> listOfCategories;
+
+    @ManyToOne
     User creator;
+
     Date dateCreated;
     Date lastModified;
-
 
 }

@@ -1,4 +1,4 @@
-package org.example.recipeobjects;
+package org.example.recipe;
 
 
 import jakarta.persistence.Entity;
@@ -6,12 +6,14 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 
 @Entity
-public class Category {
+public class Ingredient {
         @Id
         @GeneratedValue
         long id;
 
         String name;
+        int quantity;
+        UnitOfMeasurement unitOfMeasurement;
 
-}
+    }
 
